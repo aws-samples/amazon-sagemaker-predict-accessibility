@@ -428,8 +428,6 @@ Appendix
 3.  Click **Roles** on the left hand panel and then click **Create
     role**
 
-![](media/image17.png)
-
 4.  Select **Glue**
 
 ![](media/image18.png)
