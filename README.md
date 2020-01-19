@@ -1,6 +1,8 @@
-### In this workshop, we will build an end-to-end pipeline to predict the accessibility of playgrounds in NYC based on borough, and tax income information. Our pipeline will combine several different data sources, use AWS Glue for serverless extract-transform-load (ETL) jobs, Amazon SageMaker for Machine learning, Amazon Simple Storage Service (S3) for storage and staging the datasets, and Amazon Athena to make inferences from the trained machine learning model directly using SQL functions.
+# How to build an end-to-end Machine Learning pipeline using AWS Glue, Amazon S3, Amazon SageMaker and Amazon Athena.
 
-### By the end of this lab, your data scientists and analysts will learn how to directly obtain predictions from ML models using just SQL queries. The inferences can directly then be ingested into a database for OLAP or business intelligence. 
+In this workshop, we will build an end-to-end pipeline to predict the accessibility of playgrounds in NYC based on borough, and tax income information. Our pipeline will combine several different data sources, use AWS Glue for serverless extract-transform-load (ETL) jobs, Amazon SageMaker for Machine learning, Amazon Simple Storage Service (S3) for storage and staging the datasets, and Amazon Athena to make inferences from the trained machine learning model directly using SQL functions.
+
+By the end of this lab, your data scientists and analysts will learn how to directly obtain predictions from ML models using just SQL queries. The inferences can directly then be ingested into a database for OLAP or business intelligence. 
 
 The end-to-end architecture we will build in this lab is the following:
 
