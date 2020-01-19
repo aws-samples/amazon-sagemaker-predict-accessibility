@@ -90,8 +90,7 @@ b.  Import\_json\_data: To extract parks and playgrounds data in JSON
 The python code below, downloads income data in CSV format from the
 provided income\_url and writes it to s3 using boto3.
 
-https://github.com/stefannatu/predict_accessibility/blob/master/src/download_income.py
-
+https://github.com/aws-samples/amazon-sagemaker-predict-accessibility/blob/master/src/download_income.py
 
 8.  Click on Save and Run Job
 
@@ -115,7 +114,7 @@ from the provided parks\_url & playgrounds\_url and writes it to S3 in
 parquet format.
 
 
-https://github.com/stefannatu/predict_accessibility/blob/master/src/download_json.py
+https://github.com/aws-samples/amazon-sagemaker-predict-accessibility/blob/master/src/download_json.py
 
 1.  Sign into the AWS Management Console
     <https://console.aws.amazon.com/>.
@@ -214,7 +213,7 @@ playgrounds data into one for ML processing.
     \<\<userid\>\>-processed bucket
     
  
-https://github.com/stefannatu/predict_accessibility/blob/master/src/transform_for_ml.py
+https://github.com/aws-samples/amazon-sagemaker-predict-accessibility/blob/master/src/transform_for_ml.py
 
 11. Click on Save and Run Job
 
