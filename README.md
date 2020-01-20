@@ -154,7 +154,7 @@ https://github.com/aws-samples/amazon-sagemaker-predict-accessibility/blob/maste
     1.  Add database and enter \<\<userid\>\>-raw as database name
         > and click Create
 
-![](media/image7.png)
+![](media/image23.png)
 
 4.  Click **Finish and Run Crawler**
 
