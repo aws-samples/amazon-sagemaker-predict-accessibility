@@ -16,7 +16,7 @@ job = Job(glueContext)
 
 
 path="income-ny/year=2016/income.csv"
-raw_bucket='<<user-id>>-raw'
+raw_bucket='<<userid>>-raw' #replace with your user id here
 s3 = boto3.resource('s3')
 bucket = s3.Bucket(raw_bucket)
 
