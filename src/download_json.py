@@ -17,13 +17,13 @@ job = Job(glueContext)
 current_date=date.today()
 path="year="+str(current_date.year)+"/month="+str(current_date.month)+"/day="+str(current_date.day)+"/"
 
-playgrounds_raw_dir="s3://immersion-day-2.0-raw/playgrounds/" +path
+playgrounds_raw_dir="s3://<<userid>>-raw/playgrounds/" +path # replace with your userid here
 playgrounds_url='https://www.nycgovparks.org/bigapps/DPR_Playgrounds_001.json'
 playgroundsRDD = sc.parallelize([ requests.get(playgrounds_url).text])
 playgrounds_df = spark.read.json(playgroundsRDD)
 playgrounds_df.coalesce(1).write.format("parquet").mode("overwrite").save(playgrounds_raw_dir)
 
-parks_raw_dir="s3://immersion-day-2.0-raw/parks/" +path
+parks_raw_dir="s3://<<userid>>-raw/parks/" +path ## replace with your userid here
 parks_url='https://www.nycgovparks.org/bigapps/DPR_Parks_001.json'
 parksRDD = sc.parallelize([ requests.get(parks_url).text])
 parks_df = spark.read.json(parksRDD)
