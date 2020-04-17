@@ -199,6 +199,8 @@ playgrounds data into one for ML processing.
 
 -   Replace **\<\<userid\>\>-raw with your userid in the source code
     below**
+    
+-   Replace **processed_dir** with your userid in the code where it says "s3://<<userid>>-processed/processed/+path" 
 
 > The python code does the following:
 
