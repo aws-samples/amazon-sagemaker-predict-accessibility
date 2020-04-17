@@ -16,7 +16,7 @@ job = Job(glueContext)
 
 
 path="income-ny/year=2016/income.csv"
-raw_bucket='immersion-day-2.0-raw'
+raw_bucket='<<user-id>>-raw'
 s3 = boto3.resource('s3')
 bucket = s3.Bucket(raw_bucket)
 
