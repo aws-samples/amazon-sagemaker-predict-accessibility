@@ -16,21 +16,21 @@ spark = glueContext.spark_session
 job = Job(glueContext)
 args = getResolvedOptions(sys.argv, ['JOB_NAME'])
 job.init(args['JOB_NAME'], args)
-
+database = '<<userid>>-raw' #replace with your user id
 today = date.today()
 
 
 current_date=date.today()
 path="year="+str(today.year)+"/month="+str(today.month)+"/day="+str(today.day)+"/"
-processed_dir="s3://immersion-day-2.0-processed/processed/"+path
+processed_dir="s3://<<userid>>-processed/processed/"+path #replace with your user id
 partition_predicate="(year=='"+str(today.year)+"' and month=='"+str(today.month)+"' and day=='"+str(today.day)+"')"
 
 # Create a DynamicFrame using the 'parks' table
-parks_DyF = glueContext.create_dynamic_frame.from_catalog(database="immersion-day-2.0-raw", table_name="parks", push_down_predicate = partition_predicate)
+parks_DyF = glueContext.create_dynamic_frame.from_catalog(database=database, table_name="parks", push_down_predicate = partition_predicate)
 # Create a DynamicFrame using the 'playgrounds' table
-playgrounds_DyF = glueContext.create_dynamic_frame.from_catalog(database="immersion-day-2.0-raw", table_name="playgrounds", push_down_predicate = partition_predicate)
+playgrounds_DyF = glueContext.create_dynamic_frame.from_catalog(database=database, table_name="playgrounds", push_down_predicate = partition_predicate)
 # Create a DynamicFrame using the 'income_ny' table
-income_DyF = glueContext.create_dynamic_frame.from_catalog(database="immersion-day-2.0-raw", table_name="income_ny",push_down_predicate="(year=='2016')")
+income_DyF = glueContext.create_dynamic_frame.from_catalog(database=database, table_name="income_ny",push_down_predicate="(year=='2016')")
 income_ny_DyF = Filter.apply(frame = income_DyF,
                     f = lambda x: x["state"] in ["NY"] )
 print("Filtered income count:  ", income_ny_DyF.count())
