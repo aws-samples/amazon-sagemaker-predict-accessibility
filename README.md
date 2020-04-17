@@ -86,7 +86,7 @@ b.  Import\_json\_data: To extract parks and playgrounds data in JSON
 
 5.  Click **Next** in the lower-right corner of the screen.
 
-6.  Cick Save job and edit script
+6.  Click Save job and edit script
 
 7.  Paste the following source code: Replace \<\<userid\>-raw with
     the RAW bucket you created in Create S3 buckets section.
@@ -298,6 +298,8 @@ Automate the data processing pipeline using Glue Workflow(Optional)
 ## Machine Learning
 
 Next navigate to the s3 bucket where your parquet file is created (<<userid>>-processed bucket) and download the file locally on your computer.
+    
+**Note: For ML Immersion Labs, you don't need to complete this next part. Simply upload the parquet file you downloaded to your SageMaker notebook environment and run through the rest of the lab from the notebook**
     
 In the AWS console, search and find Amazon SageMaker, and click Create Notebook Instance. <br/>
 Give the notebook instance a name such as sagemaker-<<userid>>-notebook or any name of your choice which matches the required naming convention. <br/>
