@@ -6,6 +6,9 @@ In addition to training ML models using existing SageMaker functionality, you wi
 
 By the end of this lab, your data scientists and analysts will learn how to directly obtain predictions from ML models using just SQL queries. The inferences can directly then be ingested into a database for OLAP or business intelligence. 
 
+## Preferred Region:
+The Athena feature at the end of this lab is still in Preview (as of 05-01-2020) and available in "us-east-1". We caution however that APIs can often change between preview to when a feature becomes generally available, so we are including it in the lab for testing purposes only. 
+
 The end-to-end architecture we will build in this lab is the following:
 
 ![](media/image22.png)
@@ -27,6 +30,10 @@ Table of Contents
 
 [Automate the data processing pipeline using Glue Workflow(Optional)
 12](#automate-the-data-processing-pipeline-using-glue-workflowoptional)
+
+[Machine Learning](#Machine Learning)
+
+[Inferences using Amazon Athena](#Inferences using Amazon Athena) 
 
 [Conclusion 14](#conclusion)
 
@@ -324,9 +331,11 @@ xgb_predictor = xgb.deploy(initial_instance_count=1,
  
 Once your endpoints are up and running, we will run some inferences using Amazon Athena. 
 
-## Inferences using Amazon Athena
+## Inferences using Amazon Athena (only in us-east-1)
 
 As of 2019 Re:Invent, AWS introduced a new feature whereby analysts and data scientists can directly query their machine learning models using SQL without having to write any custom python code. This enables data scientists and analysts to directly ingest predictions from their ML models into a database of their choice, run SQL queries for further analytics and business intelligence.
+
+Note: As of 05-01-2020, this feature is only available in **us-east-1**, so only complete the rest of this lab if you did the entire lab in us-east-1.
 
 Here we will show how this works.
 
