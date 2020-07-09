@@ -228,7 +228,7 @@ playgrounds data into one for ML processing.
  
 https://github.com/aws-samples/amazon-sagemaker-predict-accessibility/blob/master/src/transform_for_ml.py
 
-11. Click on Save and Run Job
+11. Click on Save and Run Job. **Note: this job might take 10-15 minutes to complete. Feel free to grab a coffee, stretch your legs in the mean time.**
 
 12. Create a crawler to catalog and analyze process data as follows:
 
