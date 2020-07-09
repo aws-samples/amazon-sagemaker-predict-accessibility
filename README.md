@@ -308,7 +308,7 @@ Automate the data processing pipeline using Glue Workflow(Optional)
 
 Next navigate to the s3 bucket where your parquet file is created (<<userid>>-processed bucket) and download the file locally on your computer.
     
-**Note: For ML Immersion Labs, you don't need to complete this next part. Simply upload the parquet file you downloaded to your SageMaker notebook environment and run through the rest of the lab from the notebook**
+**Note: For ML Immersion Labs, you don't need to complete the "Inferences using Amazon Athena" Sectoin. Simply upload the parquet file you downloaded to your SageMaker notebook environment and run through the rest of the lab from the notebook entitled "Predict_accessibility_using_ML.ipynb". To download the notebook, git clone this repo locally and upload the notebook from the local folder to your SageMaker Instance. See below  for the steps**
     
 In the AWS console, search and find Amazon SageMaker, and click Create Notebook Instance. <br/>
 Give the notebook instance a name such as sagemaker-<<userid>>-notebook or any name of your choice which matches the required naming convention. <br/>
