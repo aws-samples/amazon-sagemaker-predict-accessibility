@@ -17,14 +17,14 @@ spark = glueContext.spark_session
 job = Job(glueContext)
 args = getResolvedOptions(sys.argv, ['JOB_NAME'])
 job.init(args['JOB_NAME'], args)
-database = '389535300735-raw' #replace with your user id
+database = '<user-id>-raw' #replace with your user id
 today = date.today()
 logger = glueContext.get_logger()
 logger.info("info message")
 
 current_date=date.today()
 path="year="+str(today.year)+"/month="+str(today.month)+"/day="+str(today.day)+"/"
-processed_dir="s3://aws-glue-scripts-389535300735-us-east-1/processed/"+path #replace with your user id
+processed_dir="s3://<user-id>-processed/"+path #replace with your user id
 partition_predicate="(year=='"+str(today.year)+"' and month=='"+str(today.month)+"' and day=='"+str(today.day)+"')"
 
 # Create a DynamicFrame using the 'parks' table
